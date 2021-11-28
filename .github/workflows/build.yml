@@ -141,7 +141,6 @@ jobs:
     name: Package IPA
     runs-on: ubuntu-20.04
     needs: build-ios
-    if: github.event_name == 'release' || github.event.inputs.test_release == 'true'
     steps:
       - name: Download Artifact
         uses: actions/download-artifact@v2
