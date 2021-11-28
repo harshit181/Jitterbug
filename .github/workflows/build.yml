@@ -152,7 +152,6 @@ jobs:
           mv Jitterbug.xcarchive/Products/Applications Payload
           zip -r Jitterbug.ipa Payload -x "._*" -x ".DS_Store" -x "__MACOSX"
       - name: Upload Release Asset
-        if: github.event_name == 'release'
         uses: actions/upload-release-asset@v1.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
